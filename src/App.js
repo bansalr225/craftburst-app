@@ -1,3 +1,4 @@
+
 import './App.css';
 import AdminPanel from './components/AdminPanel';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -6,6 +7,7 @@ import ProfilePage from './components/ProfilePgae';
 import ScheduleCalendar from './components/ScheduleCalendar';
 import FeeDetails from './components/FeeDetails';
 import SearchBar from './components/SearchBar';
+import SideTab from './components/SideTab';
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
         <Route path="/getSchedule" element={<ScheduleCalendar />} />
         <Route path="/getFeeDetail" element={<FeeDetails />} />
         <Route path="/search" element={<SearchBar />} />
+        <Route path="/sideTab" element={<SideTab />} />
 
         <Route path="/*" element={<Login />} />
       </Routes>

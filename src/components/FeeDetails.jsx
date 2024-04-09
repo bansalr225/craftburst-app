@@ -3,14 +3,8 @@ import axios from 'axios';
 import "../CSS/text.css";
 
 const FeeDetails = () => {
-  const [feeDetails, setFeeDetails] = useState({
-    totalFee: '',
-    remainingFee: '',
-    frequency: '',
-    studentName: '',
-    class: '',
-    financialDetails: [],
-  });
+  const [feeDetails, setFeeDetails] = useState([]);
+
 
   useEffect(() => {
     axios.get('http://localhost:8080/hello/getFeeDetails')
@@ -36,23 +30,23 @@ const FeeDetails = () => {
         <table className="table table-bordered">
           <tbody>
             <tr>
-              <td><label style={{ color: '#1a0000', fontWeight: 'bold' }}>Total Fee:</label></td>
+              <td><label style={{ color: 'grey', fontWeight: 'bold' }}>Total Fee:</label></td>
               <td>{feeDetails.totalFee}</td>
-              <td><label style={{ color: '#1a0000', fontWeight: 'bold' }}>Remaining Fee:</label></td>
-              <td>{feeDetails.remainingFee}</td>
+              <td><label style={{ color: 'grey', fontWeight: 'bold' }}>Remaining Fee:</label></td>
+              <td style={{ color: 'red'}}>{feeDetails.remainingFee}</td>
             </tr>
             <tr>
-              <td><label style={{ color: '#1a0000', fontWeight: 'bold' }}>Frequency:</label></td>
+              <td><label style={{ color: 'grey', fontWeight: 'bold' }}>Frequency:</label></td>
               <td>{feeDetails.frequency}</td>
             </tr>
           </tbody>
         </table>
 
-        <h3>Fee history</h3>
+        <h5>Fee history</h5>
         <ul>
           {feeDetails.paymentHistory && feeDetails.paymentHistory.length > 0 ? (
             feeDetails.paymentHistory.map((payment, index) => (
-              <li key={index}>{`${payment.amountPaid} paid on ${payment.paymentDate}`}</li>
+              <li style={{ color: 'grey'}} key={index}>{`${payment.amountPaid} paid on ${payment.paymentDate}`}</li>
             ))
           ) : (
             <li>No payment history available</li>
