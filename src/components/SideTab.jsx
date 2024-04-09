@@ -12,6 +12,7 @@ import ClassRoomReport from './ClassRoomReport';
 import SearchBar from './SearchBar';
 import ProfilePage from './ProfilePgae';
 import FeeDetails from './FeeDetails';
+import ScheduleCalendar from './ScheduleCalendar';
 
 const useStyles = makeStyles({
   drawer: {
@@ -48,9 +49,11 @@ const SideTab = () => {
           >
             <Tab label="Attendence" value="0" />
             <Tab label="Class Report" value="1" />
+            <Tab label="Class Schedule" value="5" />
             <Tab label="Search Student" value="2" />
             <Tab label="My Profile" value="3" />
             <Tab label="My Fee Detail" value="4" />
+
           </Tabs>
         </Box>
       </Drawer>
@@ -71,6 +74,9 @@ const SideTab = () => {
           </TabPanel>
           <TabPanel value="4">
             <FeeDetails/>
+          </TabPanel>
+          <TabPanel value="5">
+            <ScheduleCalendar/>
           </TabPanel>
         </Grid>
       </Grid>
