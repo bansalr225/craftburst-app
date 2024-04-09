@@ -1,0 +1,30 @@
+/* custom-calendar-styles.css */
+.rbc-btn-group {
+    flex: 1;
+    padding-left: 10px; /* Adjust the padding as needed */
+  }
+  
+  .rbc-header + .rbc-header {
+    padding-left: 30px;
+  }
+  
+  .rbc-header {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 30px; /* Adjust the padding as needed */
+  }
+  
+  .rbc-label {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  .rbc-today {
+    background-color: #f0f0f0; /* Highlight today's date with a light background color */
+  }
+  
+  .rbc-btn-group + .rbc-btn-group {
+    margin-left: 10px;
+  }
+  
