@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Profile from '../Images/Profile.jpg';
-import AdminBackground from '../Images/AdminBackground.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -72,7 +71,7 @@ const ProfilePage = ({ userId }) => {
 
   return (
     <>
-    <style>
+    {/* <style>
       {`
         body {
           background-image: url(${AdminBackground});
@@ -81,7 +80,7 @@ const ProfilePage = ({ userId }) => {
           padding: 0;
         }
       `}
-    </style>
+    </style> */}
     <div style={{ textAlign: 'center' }}>
   <h2>Student Information</h2>
 

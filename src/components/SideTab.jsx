@@ -13,6 +13,8 @@ import SearchBar from './SearchBar';
 import ProfilePage from './ProfilePgae';
 import FeeDetails from './FeeDetails';
 import ScheduleCalendar from './ScheduleCalendar';
+import CreateTest from './CreateTest';
+import TestLists from './TestLists';
 
 const useStyles = makeStyles({
   drawer: {
@@ -53,13 +55,15 @@ const SideTab = () => {
             <Tab label="Search Student" value="2" />
             <Tab label="My Profile" value="3" />
             <Tab label="My Fee Detail" value="4" />
+            <Tab label="Create Test" value="6" />
+            <Tab label="View Tests" value="7" />
 
           </Tabs>
         </Box>
       </Drawer>
 
       <Grid container spacing={2}>
-        <Grid item xs={10} sm={12} style={{ marginLeft: '40px' }}>
+        <Grid item xs={10} sm={12} style={{ marginLeft: '40px' , marginTop: '-150px' }}>
           <TabPanel value="0">
             <Attendance />
           </TabPanel>
@@ -77,6 +81,12 @@ const SideTab = () => {
           </TabPanel>
           <TabPanel value="5">
             <ScheduleCalendar/>
+          </TabPanel>
+          <TabPanel value="6">
+            <CreateTest/>
+          </TabPanel>
+          <TabPanel value="7">
+            <TestLists/>
           </TabPanel>
         </Grid>
       </Grid>

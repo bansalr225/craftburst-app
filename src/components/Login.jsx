@@ -4,7 +4,7 @@ import React, { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/login.css';
 import axios from 'axios';
-import AdminBackground from '../Images/AdminBackground.jpg';
+//import AdminBackground from '../Images/AdminBackground.jpg';
 import { faUser, faLock, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -59,7 +59,7 @@ const Login = () => {
 
   return (
     <>
-    <style>
+    {/* <style>
       {`
         body {
           background-image: url(${AdminBackground});
@@ -68,7 +68,7 @@ const Login = () => {
           padding: 0;
         }
       `}
-    </style>
+    </style> */}
     <div className="login-card">
     <div className="login-card-content">
       <div className="header">

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Container, Form, Button, Alert, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import "../CSS/text.css";
-import AdminBackground from "../Images/AdminBackground.jpg";
 
 const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -215,7 +214,7 @@ const AdminPanel = () => {
 
   return (
     <>
-      <style>
+      {/* <style>
         {`
         body {
           background-image: url(${AdminBackground});
@@ -224,7 +223,7 @@ const AdminPanel = () => {
           padding: 0;
         }
       `}
-      </style>
+      </style> */}
       <Container className="my-5">
         <h1 style={{ textAlign: "center" }} className="text-primary fs-7">
           Admin Panel

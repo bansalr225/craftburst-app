@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useTheme } from '@mui/material/styles';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useMediaQuery } from '@mui/material';
+
 const ClassRoomReport = () => {
-
-
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
@@ -17,32 +21,21 @@ const ClassRoomReport = () => {
 
     return (
         <div>
-            <ul style={{ listStyleType: 'none', padding: 0, maxHeight: '300px', overflowY: 'auto', '@media (max-width: 768px)': { maxHeight: '150px' } }}>
-
-                {searchResults.map((result, index) => (
-                    <li
-                        key={index}
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            marginBottom: '20px',
-                            width: '100%',
-                        }}
-                    >
-                        <span style={{ marginRight: '10px' }}>
-                            {`${result.name}(${result.rollNo})`}
-                        </span>
-                        <span style={{ marginLeft: '10px' }}>
-                            {`${result.totalAttendance})`}
-                        </span>
-
-                    </li>
-                ))}
-            </ul>
+            <ResponsiveContainer width={isSmallScreen ? 400 : 800} height={400}  >
+                <BarChart
+                    data={searchResults}
+                    margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" tick={false} />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Bar dataKey="totalAttendance" fill="#8884d8" />
+                </BarChart>
+            </ResponsiveContainer>
         </div>
     );
-
 };
 
 export default ClassRoomReport;

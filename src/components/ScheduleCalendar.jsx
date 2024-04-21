@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import moment from 'moment';
 import 'react-calendar/dist/Calendar.css';
-import AdminBackground from '../Images/AdminBackground.jpg';
 
 const ScheduleCalendar = () => {
   const [schedule, setSchedule] = useState([]);
@@ -37,13 +36,7 @@ const ScheduleCalendar = () => {
     <>
       <style>
         {`
-          body {
-            background-image: url(${AdminBackground});
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-          }
-
+         
           .calendar-container {
             max-width: 800px;
             margin: auto;

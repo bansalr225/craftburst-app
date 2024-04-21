@@ -1,18 +1,18 @@
-
 import './App.css';
 import AdminPanel from './components/AdminPanel';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import SideTab from './components/SideTab';
+import TestReport from './components/TestReport';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Set the default route to Login */}
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<AdminPanel />} />
         <Route path="/sideTab" element={<SideTab />} /> 
+        <Route path="/report/:id" element={<TestReport />} />
 
         <Route path="/*" element={<Login />} />
       </Routes>
