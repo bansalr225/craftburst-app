@@ -74,17 +74,17 @@ const ScheduleCalendar = () => {
         `}
       </style>
 
-      <div className="calendar-container">
-        <h2>Class Schedule Calendar</h2>
-        <Calendar onChange={setSelectedDate} value={selectedDate} />
-        <div>
-          <h3>Schedule for {moment(selectedDate).format('MMMM D, YYYY')}</h3>
+      <div className="calendar-container" >
+        <h2 style={{color: ' #404040' }}>Class Schedule Calendar</h2>
+        <Calendar onChange={setSelectedDate} value={selectedDate}  />
+        <div  >
+          {/* <h4 style={{color: ' #808080' }}>Schedule for {moment(selectedDate).format('MMMM D, YYYY')}</h4> */}
           {filteredSchedule.length === 0 ? (
             <p>No classes scheduled for this date.</p>
           ) : (
             <ul className="event-list">
               {filteredSchedule.map((item) => (
-                <li key={item.title} className="event-item">
+                <li key={item.title} className="event-item" style={{backgroundColor: '#99ccff'}}>
                   <strong>{item.title}</strong> with {item.teacher} from {moment(item.start).format('h:mm A')} to{' '}
                   {moment(item.end).format('h:mm A')}
                 </li>

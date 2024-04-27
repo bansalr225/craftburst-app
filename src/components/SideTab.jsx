@@ -15,6 +15,7 @@ import FeeDetails from './FeeDetails';
 import ScheduleCalendar from './ScheduleCalendar';
 import CreateTest from './CreateTest';
 import TestLists from './TestLists';
+import CreateNotice from './CreateNotice';
 
 const useStyles = makeStyles({
   drawer: {
@@ -57,6 +58,7 @@ const SideTab = () => {
             <Tab label="My Fee Detail" value="4" />
             <Tab label="Create Test" value="6" />
             <Tab label="View Tests" value="7" />
+            <Tab label="Make Announce" value="8" />
 
           </Tabs>
         </Box>
@@ -87,6 +89,9 @@ const SideTab = () => {
           </TabPanel>
           <TabPanel value="7">
             <TestLists/>
+          </TabPanel>
+          <TabPanel value="8">
+            <CreateNotice/>
           </TabPanel>
         </Grid>
       </Grid>
