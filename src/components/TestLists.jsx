@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 const TestLists = () => {
   const [completedTests, setCompletedTests] = useState([]);
   const [notCompletedTests, setNotCompletedTests] = useState([]);
- // const [selectedTest, setSelectedTest] = useState(null);
 
 
   const navigate = useNavigate();

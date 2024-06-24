@@ -16,6 +16,9 @@ import ScheduleCalendar from './ScheduleCalendar';
 import CreateTest from './CreateTest';
 import TestLists from './TestLists';
 import CreateNotice from './CreateNotice';
+import NoticeLists from './NoticeLists';
+import MenuBar from './MenuBar';
+import OptionsList from './OptionsList';
 
 const useStyles = makeStyles({
   drawer: {
@@ -59,13 +62,15 @@ const SideTab = () => {
             <Tab label="Create Test" value="6" />
             <Tab label="View Tests" value="7" />
             <Tab label="Make Announce" value="8" />
-
+            <Tab label="Announcements" value="9" />
+            <Tab label="Menu Bar" value="10" />
+            <Tab label="Options List" value="11" />
           </Tabs>
         </Box>
       </Drawer>
 
       <Grid container spacing={2}>
-        <Grid item xs={10} sm={12} style={{ marginLeft: '40px' , marginTop: '-150px' }}>
+        <Grid item xs={12} sm={14} style={{ marginLeft: '40px' , marginTop: '-150px' }}>
           <TabPanel value="0">
             <Attendance />
           </TabPanel>
@@ -92,6 +97,15 @@ const SideTab = () => {
           </TabPanel>
           <TabPanel value="8">
             <CreateNotice/>
+          </TabPanel>
+          <TabPanel value="9">
+            <NoticeLists/>
+          </TabPanel>
+          <TabPanel value="10">
+            <MenuBar/>
+          </TabPanel>
+          <TabPanel value="11">
+            <OptionsList/>
           </TabPanel>
         </Grid>
       </Grid>
